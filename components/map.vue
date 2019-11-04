@@ -14,7 +14,7 @@
         </ul>
       </div>
       <div>
-        <mapMarker :pos="items[active].src"/>
+        <mapMarker class="mb_map" :pos="items[active].src"/>
       </div>
     </div>
   </div>
@@ -48,8 +48,22 @@ export default {
 .flex {
   display: flex;
   height: 100%;
+  flex-direction: row;
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
   & > div {
     width: 50%;
+
+    @media (max-width: 425px) {
+     width: 100%;
+    }
+  }
+}
+
+.mb_map {
+  @media (max-width: 425px) {
+   height: 500px;
   }
 }
 
@@ -57,12 +71,22 @@ export default {
   padding-top: 101px;
   padding-left: 61px;
   margin-bottom: 157px;
+
+  @media (max-width: 425px) {
+    padding-top: 50.5px;
+    padding-left: 31px;
+    margin-bottom: 77px;
+  }
   & > p {
     font-size: 51px;
     font-family: "SuisseIntl-Light";
     color: #FFFFFF;
     text-align: left;
     margin-bottom: 49px;
+
+    @media (max-width: 425px) {
+      font-size: 31px;
+    }
   }
 }
 
@@ -70,6 +94,10 @@ export default {
   display: flex;
   flex-direction: row;
   margin-bottom: 53px;
+
+  @media (max-width: 425px) {
+    margin-bottom: 22.5px
+  }
 }
 
 .sub_info {
@@ -88,10 +116,18 @@ export default {
   margin-right: 30px;
   font-family: "SuisseIntl-SemiBold";
   color: #FFFFFF;
+
+  @media (max-width: 425px) {
+    font-size: 10px;
+  }
 }
 
 .map_label {
   font-size: 39px !important;
   margin-bottom: 36px !important;
+
+  @media (max-width: 425px) {
+    font-size: 28.5px !important;
+  }
 }
 </style>

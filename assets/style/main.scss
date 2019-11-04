@@ -32,11 +32,19 @@ a {
 
 .wrapper {
   margin: 62px 67px 99px 60px;
+
+  @media (max-width: 425px) {
+    margin: 22px 27px 59px 20px;
+  }
 }
 
 .link {
   font-size: 51px;
   line-height: 48px;
   font-family: "SuisseIntl-Light";
-  font-weight: 300; 
+  font-weight: 300;
+
+  @media (max-width: 425px) {
+    font-size: 31px;
+  }
 }

@@ -45,24 +45,44 @@ export default {
   color: #333333;
   font-family: "SuisseIntl-Light";
   margin-bottom: 50px;
+
+  @media (max-width: 425px) {
+    font-size: 55px
+  }
 }
 
 .sub_label {
   font-size: 51px;
   font-family: "SuisseIntl-Light";
   margin-bottom: 43px;
+
+  @media (max-width: 425px) {
+    font-size: 31px
+  }
 }
 
 .flex {
   display: flex;
   flex-direction: row;
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
 
   & > div:first-child {
     width: 60%;
+
+    @media (max-width: 425px) {
+      width: 100%;
+    }
+
   }
 
   & > div:nth-child(2) {
     width: 40%;
+
+    @media (max-width: 425px) {
+      width: 100%;
+    }
   }
 }
 
@@ -71,10 +91,18 @@ export default {
   font-family: "SuisseIntl-Light";
   text-align: left;
   margin-bottom: 37px;
+
+  @media (max-width: 425px) {
+    font-size: 13px;
+  }
 }
 
 .sub_link {
   font-size: 39px;
+
+  @media (max-width: 425px) {
+    font-size: 29px;
+  }
 }
 
 .li_link {
